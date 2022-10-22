@@ -58,7 +58,14 @@ def xout(board, row, col):
         board[row][c] = "x"
     # X out all spots below
     for r in range(row + 1, len(board)):
-
+        board[r][col] = "x"
+    # X out all spots above
+    for r in range(row - 1, -1, -1):
+        board[r][col] = "x"
+    # X out all spots diagonally down to the right
+    c = col + 1
+    for r in range(row + 1, len(board)):
+        if c >= len(board):
             break
         board[r][c] = "x"
         c += 1
@@ -78,14 +85,7 @@ def xout(board, row, col):
         c += 1
     # X out all spots diagonally down to the left
     c = col - 1
-    for r in range(row +         board[r][col] = "x"
-    # X out all spots above
-    for r in range(row - 1, -1, -1):
-        board[r][col] = "x"
-    # X out all spots diagonally down to the right
-    c = col + 1
     for r in range(row + 1, len(board)):
-        if c >= len(board):1, len(board)):
         if c < 0:
             break
         board[r][c] = "x"
