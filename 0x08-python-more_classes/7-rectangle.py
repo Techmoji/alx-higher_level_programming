@@ -54,9 +54,7 @@ class Rectangle:
         return (self.__width * self.__height)
 
     def perimeter(self):
-	"""Print a message for every deletion of a Rectangle."""
-        type(self).number_of_instances -= 1
-        print("Bye rectangle...")        """Return the perimeter of the Rectangle."""
+        """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return (0)
         return ((self.__width * 2) + (self.__height * 2))
@@ -82,4 +80,6 @@ class Rectangle:
         return (rect)
 
     def __del__(self):
-       
+        """Print a message for every deletion of a Rectangle."""
+        type(self).number_of_instances -= 1
+        print("Bye rectangle...")
