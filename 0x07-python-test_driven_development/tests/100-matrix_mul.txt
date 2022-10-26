@@ -10,7 +10,8 @@
 [[96, 50], [57, 37]]
 >>> print(matrix_mul([[3, 19, 7], [11, 12, 5], [2, 4, 8]], [[12, 3], [9, 4], [15, 2]]))
 [[312, 99], [315, 91], [180, 38]]
-nvalid arguments
+
+# Invalid arguments
 >>> try:
 ...     print(matrix_mul(12, [[4, 6]]))
 ... except TypeError as ex:
