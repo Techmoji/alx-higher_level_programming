@@ -14,20 +14,7 @@ def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
     '''
     funcs = (
         lambda txt: '{} must be a list'.format(txt),
-        lambda txt: '{} can\'t be empty'.fo x: len(x) == 0, matrix_1)):
-        raise ValueError(funcs[1](name_1))
-    if all(map(lambda x: len(x) == 0, matrix_2)):
-        raise ValueError(funcs[1](name_2))
-    if not all(map(lambda x: funcs[5](x), matrix_1)):
-        raise TypeError(funcs[3](name_1))
-    if not all(map(lambda x: funcs[5](x), matrix_2)):
-        raise TypeError(funcs[3](name_2))
-    size0[1] = len(matrix_1[0])
-    size1[1] = len(matrix_2[0])
-    if not all(map(lambda x: len(x) == size0[1], matrix_1)):
-        raise TypeError(funcs[4](name_1))
-    if not all(map(lambda x: len(x) == size1[1], matrix_2)):
-        raise TypeError(funcs[4](rmat(txt),
+        lambda txt: '{} can\'t be empty'.format(txt),
         lambda txt: '{} must be a list of lists'.format(txt),
         lambda txt: '{} should contain only integers or floats'.format(txt),
         lambda txt: 'each row of {} must be of the same size'.format(txt),
@@ -49,7 +36,20 @@ def get_matrix_sizes(matrix_1, matrix_2, name_1, name_2):
         raise TypeError(funcs[2](name_1))
     if not all(map(lambda x: isinstance(x, list), matrix_2)):
         raise TypeError(funcs[2](name_2))
-    if all(map(lambdaname_2))
+    if all(map(lambda x: len(x) == 0, matrix_1)):
+        raise ValueError(funcs[1](name_1))
+    if all(map(lambda x: len(x) == 0, matrix_2)):
+        raise ValueError(funcs[1](name_2))
+    if not all(map(lambda x: funcs[5](x), matrix_1)):
+        raise TypeError(funcs[3](name_1))
+    if not all(map(lambda x: funcs[5](x), matrix_2)):
+        raise TypeError(funcs[3](name_2))
+    size0[1] = len(matrix_1[0])
+    size1[1] = len(matrix_2[0])
+    if not all(map(lambda x: len(x) == size0[1], matrix_1)):
+        raise TypeError(funcs[4](name_1))
+    if not all(map(lambda x: len(x) == size1[1], matrix_2)):
+        raise TypeError(funcs[4](name_2))
     return size0, size1
 
 
